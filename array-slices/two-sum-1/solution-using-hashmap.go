@@ -2,12 +2,11 @@ package main
 
 import "fmt"
 
-// Output: Index of
 // 96.89% faster
 // Time and Space O(N)
 // https://leetcode.com/problems/two-sum/
 
-func twoSum(nums []int, target int) []int {
+func twoSumss(nums []int, target int) []int {
 	hMap := map[int]int{} // Key : num   Value : index
 	for i := range nums {
 		complement := target - nums[i]
