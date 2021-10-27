@@ -1,19 +1,19 @@
-package main
+package algorithms
 
 import (
-	"fmt"
 	"math/rand"
 )
 
-func Quicksort(v []int) {
+// QuickSort sorts the elements of v in ascending order.
+func QuickSort(v []int) {
 	if len(v) < 20 {
 		InsertionSort(v)
 		return
 	}
 	p := Pivot(v)
 	low, high := Partition(v, p)
-	Quicksort(v[:low])
-	Quicksort(v[high:])
+	QuickSort(v[:low])
+	QuickSort(v[high:])
 }
 
 // Pivot : median of three random elements,pivot becomes 1.2 nlogn number of comparisons
@@ -93,8 +93,9 @@ func InsertionSort(v []int) {
 	}
 }
 
-func main() {
-	var inputs = []int{1, 2, 3, 8, 9, 4, 5, 6, 11, 4, 5, 6, 2, 6, 1, 1, 1, 1, 7, 9}
-	Quicksort(inputs)
-	fmt.Println(inputs)
-}
+//
+//func main() {
+//	inputs := []int{1, 2, 3, 23, 4, 45, 6, 7, 8, 3, 2, 8, 21, 45, 23, 1, 23, 4, 56, 11, 12, 15, 13, 17, 7, 3, 12, 1, 5, 6, 7, 8}
+//	QuickSort(inputs)
+//	fmt.Println(inputs)
+//}
