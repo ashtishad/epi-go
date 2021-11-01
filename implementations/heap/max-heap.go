@@ -26,7 +26,7 @@ func (h *IntMaxHeap) Pop() interface{} {
 //	heap.Init(maxHeap)
 //	heap.Push(maxHeap, 3)
 //	fmt.Println("minimum", (*maxHeap)[0])
-//	for maxHeap.Len() > 0 {
+//	for maxHeap.len() > 0 {
 //		fmt.Printf(" %d ", heap.Pop(maxHeap))
 //	}
 //}

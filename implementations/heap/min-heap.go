@@ -26,7 +26,7 @@ func (h *IntHeap) Pop() interface{} {
 //	heap.Init(minHeap)
 //	heap.Push(minHeap, 3)
 //	fmt.Println("minimum", (*minHeap)[0])
-//	for minHeap.Len() > 0 {
+//	for minHeap.len() > 0 {
 //		fmt.Printf(" %d ", heap.Pop(minHeap))
 //	}
 //}
