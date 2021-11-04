@@ -1,17 +1,6 @@
-package main
+// Time: O(N) Space: O(1)
 
-import "fmt"
-
-func reverse(nums []int) []int {
-	var lp, rp = 0, len(nums) - 1
-
-	for lp < rp {
-		nums[lp], nums[rp] = nums[rp], nums[lp]
-		lp++
-		rp--
-	}
-	return nums
-}
+package leetcode
 
 func rotate(matrix [][]int) {
 	n := len(matrix)
@@ -29,24 +18,28 @@ func rotate(matrix [][]int) {
 
 	for i := 0; i < n; i++ {
 		// transpose, i=rows, j=columns
+		// j = i+1, coz diagonal elements didn't change in a square matrix
 		for j := i + 1; j < n; j++ {
-			tmp := matrix[i][j]
-			matrix[i][j] = matrix[j][i]
-			matrix[j][i] = tmp
+			swap(matrix, i, j)
 		}
 		// reverse each row of the image
 		matrix[i] = reverse(matrix[i])
 	}
 }
 
-func main() {
-	var matrix = [][]int{
-		{1, 2, 3, 4},
-		{5, 6, 7, 8},
-		{9, 10, 11, 12},
-		{13, 14, 15, 16},
-	}
+// swap changes original slice's i,j position
+func swap(nums [][]int, i, j int) {
+	nums[i][j], nums[j][i] = nums[j][i], nums[i][j]
+}
 
-	rotate(matrix)
-	fmt.Println(matrix)
+// reverses a row of image, matrix[i]
+func reverse(nums []int) []int {
+	var lp, rp = 0, len(nums) - 1
+
+	for lp < rp {
+		nums[lp], nums[rp] = nums[rp], nums[lp]
+		lp++
+		rp--
+	}
+	return nums
 }
