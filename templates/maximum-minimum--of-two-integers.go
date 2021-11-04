@@ -8,8 +8,8 @@ func max(a int, b int) int {
 }
 
 func min(a int, b int) int {
-	if a > b {
-		return b
+	if a < b {
+		return a
 	}
-	return a
+	return b
 }

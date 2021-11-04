@@ -1,12 +1,13 @@
 package main
 
-func reverseSlice(nums []int) []int {
-	var lp, rp = 0, len(nums) - 1
+func swap(nums []int, i, j int) {
+	nums[i], nums[j] = nums[j], nums[i]
+}
 
-	for lp < rp {
-		nums[lp], nums[rp] = nums[rp], nums[lp]
-		lp++
-		rp--
+func reverse(nums []int, s int, e int) {
+	for s < e {
+		swap(nums, s, e)
+		s++
+		e--
 	}
-	return nums
 }
