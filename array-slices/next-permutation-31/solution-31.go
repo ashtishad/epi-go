@@ -16,7 +16,7 @@ func nextPermutation(nums []int) {
 	// start from right most to leftward,find the first number which is larger than PIVOT
 	for rp > 0 {
 		if nums[rp] > nums[pIdx] {
-			nums[rp], nums[pIdx] = nums[pIdx], nums[rp]
+			swap(nums, pIdx, rp)
 			break
 		} else {
 			rp--
