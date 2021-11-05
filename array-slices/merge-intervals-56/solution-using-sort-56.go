@@ -1,5 +1,5 @@
-// https://leetcode.com/problems/merge-intervals/
-// Time: O(n)  Space: O(n)
+// https://leetcode.com/problems/merge-intervals/discuss/1561393/Go-Submission-with-Explanation
+// Time: O(n log(n))  Space: O(n)
 
 package main
 
@@ -21,7 +21,7 @@ func merge(intervals [][]int) [][]int {
 	for i := 1; i < n; i++ {
 		var ok = isOverlap(tmpInterval, intervals[i])
 		if ok {
-			// overlap detected, as intervals are sorted, just update Ending index
+			// overlap detected, as intervals are sorted, just update maximum Ending index
 			tmpInterval[1] = max(intervals[i][1], tmpInterval[1])
 		} else {
 			// append stored tmpInterval to res and continue with next iteration
