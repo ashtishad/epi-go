@@ -5,20 +5,19 @@ import (
 )
 
 func binarySearch(nums []int, target int) int {
-	var lo int = 0
-	var hi int = len(nums) - 1
+	var le, ri = 0, len(nums) - 1
 
-	for lo <= hi {
-		mid := lo + (hi-lo)/2
+	for le <= ri {
+		mid := le + (ri-le)/2
 
 		if nums[mid] == target {
 			return mid
 		} else if nums[mid] > target {
 			// use left sub-list
-			hi = mid - 1
+			ri = mid - 1
 		} else {
 			// use right sub-list
-			lo = mid + 1
+			le = mid + 1
 		}
 	}
 
