@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/product-of-array-except-self/
 // Time: O(N) Space: O(N)
 
-package main
+package leetcode
 
 // lp[i] = nums[i-1] * lp[i-1]
 func getLeftProducts(nums []int) []int {

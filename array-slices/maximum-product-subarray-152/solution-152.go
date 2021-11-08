@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/maximum-product-subarray/
 
-package main
+package leetcode
 
 import "fmt"
 

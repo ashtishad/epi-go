@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/longest-substring-without-repeating-characters/discuss/1559279/Go-Submission-with-Explanation
 
-package main
+package leetcode
 
 // abcabcbb -> 3 (abc)
 // bbbbbbb  -> 1 (b)

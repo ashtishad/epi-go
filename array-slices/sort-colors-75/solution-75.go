@@ -1,4 +1,4 @@
-package main
+package leetcode
 
 func swap(nums []int, i, j int) {
 	nums[i], nums[j] = nums[j], nums[i]

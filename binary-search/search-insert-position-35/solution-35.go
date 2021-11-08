@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/search-insert-position/discuss/249092/Come-on-forget-the-binary-search-patterntemplate!-Try-understand-it!
 
-package search_insert_position_35
+package leetcode
 
 func searchInsert(nums []int, target int) int {
 	var l, r = 0, len(nums) - 1

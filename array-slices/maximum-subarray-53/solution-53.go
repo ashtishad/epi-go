@@ -1,14 +1,7 @@
 // https://leetcode.com/problems/maximum-subarray
 // Time O(N) , Space O(N)
 
-package maximum_subarray_53
-
-func max(num1 int, num2 int) int {
-	if num1 >= num2 {
-		return num1
-	}
-	return num2
-}
+package leetcode
 
 func maxSubArray(nums []int) int {
 	currSum, maxSum := 0, nums[0]
@@ -26,4 +19,11 @@ func maxSubArray(nums []int) int {
 		maxSum = max(maxSum, currSum)
 	}
 	return maxSum
+}
+
+func max(a int, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }

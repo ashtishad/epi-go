@@ -20,11 +20,16 @@ func rotateLeft(d int, nums []int) []int {
 	return nums
 }
 
-func reverse(nums []int, start int, end int) []int {
-	for i, j := start, end; i < j; i, j = i+1, j-1 {
-		nums[i], nums[j] = nums[j], nums[i]
+func swap(nums []int, i, j int) {
+	nums[i], nums[j] = nums[j], nums[i]
+}
+
+func reverse(nums []int, s int, e int) {
+	for s < e {
+		swap(nums, s, e)
+		s++
+		e--
 	}
-	return nums
 }
 
 func main() {

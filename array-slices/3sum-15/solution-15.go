@@ -1,11 +1,11 @@
-package main
+package leetcode
 
 import "sort"
 
 func threeSum(nums []int) [][]int {
 	sort.Ints(nums)
 
-	var result [][]int
+	var res [][]int
 	//  Input: nums = [-1-1,0,0,1,2,-1,-4]
 	for i := range nums {
 		// not first element and previous element is same, SKIP
@@ -22,7 +22,7 @@ func threeSum(nums []int) [][]int {
 			} else if sum < 0 {
 				lp++
 			} else {
-				result = append(result, []int{nums[i], nums[lp], nums[rp]})
+				res = append(res, []int{nums[i], nums[lp], nums[rp]})
 				lp++
 				for nums[lp] == nums[lp-1] && lp < rp {
 					lp++
@@ -30,5 +30,5 @@ func threeSum(nums []int) [][]int {
 			}
 		}
 	}
-	return result
+	return res
 }

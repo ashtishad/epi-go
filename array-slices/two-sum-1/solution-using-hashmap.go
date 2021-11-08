@@ -1,8 +1,7 @@
-package main
+package leetcode
 
 import "fmt"
 
-// 96.89% faster
 // Time and Space O(N)
 // https://leetcode.com/problems/two-sum/
 

@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/merge-intervals/discuss/1561393/Go-Submission-with-Explanation
 // Time: O(n log(n))  Space: O(n)
 
-package main
+package leetcode
 
 import "sort"
 

@@ -1,28 +1,26 @@
-package main
+package leetcode
 
 // https://leetcode.com/problems/find-all-duplicates-in-an-array/
 // time O(N) space O(N)
-// Runtime: 3 ms
 
 func findDuplicatesLinearSpace(nums []int) []int {
-	var resultSet []int
-	uniqueSet := make(map[int]bool)
+	var res []int
+	var seen = map[int]bool{}
 	for _, num := range nums {
-		_, ok := uniqueSet[num]
-		// If already present, then it is a duplicate
-		if ok == true {
-			resultSet = append(resultSet, num)
+		if _, ok := seen[num]; ok {
+			// If already present, then it is a duplicate
+			res = append(res, num)
 		}
 		// Add the number to the set
-		uniqueSet[num] = true
+		seen[num] = true
 	}
-	return resultSet
+	return res
 }
 
 /*
 Algorithm:
-Create a uniqueSet that will store all the unique integers.
-Create a resultSet that will have all the duplicate integers.
+Create set seen that will store all the unique integers.
+Create a res slice that will have all the duplicate integers.
 Iterate through all elements of the slice and add it to the set.
 If the element is already present in the set, you can add the element to the result set.
 Return the result set.

@@ -1,6 +1,6 @@
 // https://leetcode.com/problems/kth-largest-element-in-an-array/discuss/1546976/Go-Solution-using-Min-Heap
 
-package main
+package leetcode
 
 import "container/heap"
 

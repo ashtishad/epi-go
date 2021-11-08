@@ -42,7 +42,6 @@ func reverse(nums []int, s int, e int) {
 // value is not in increasing order(from right to left)
 // returns -1 if not found(it's already in its last permutation)
 func checkPermutationPossibility(nums []int) (idx int) {
-	// search right to left for 1st number(from right) that is not in increasing order
 	var rp = len(nums) - 1
 	for rp > 0 {
 		if nums[rp-1] < nums[rp] {

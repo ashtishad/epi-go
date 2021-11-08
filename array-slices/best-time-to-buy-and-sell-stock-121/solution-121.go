@@ -1,28 +1,28 @@
-package best_time_to_buy_and_sell_stock_121
-
-func max(num1, num2 int) int {
-	if num1 > num2 {
-		return num1
-	}
-	return num2
-}
+package leetcode
 
 func maxProfit(prices []int) int {
-	maxP := 0
+	res := 0
 	if len(prices) == 1 {
-		return maxP
+		return res
 	}
 	lp, rp := 0, 1
 
 	for rp < len(prices) {
 		if prices[lp] < prices[rp] {
 			profit := prices[rp] - prices[lp]
-			maxP = max(maxP, profit)
+			res = max(res, profit)
 			rp++
 		} else {
 			lp = rp
 			rp++
 		}
 	}
-	return maxP
+	return res
+}
+
+func max(a int, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }

@@ -1,6 +1,6 @@
 // Optimal, time O(N), space O(1)
 
-package main
+package leetcode
 
 func findDuplicates(nums []int) []int {
 	var resultSet []int

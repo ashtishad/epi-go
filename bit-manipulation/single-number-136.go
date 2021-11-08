@@ -1,6 +1,4 @@
-package main
-
-import "fmt"
+package leetcode
 
 /*
 Optimised Approach
@@ -17,9 +15,4 @@ func singleNumber(nums []int) int {
 		nums[0] ^= nums[i]
 	}
 	return nums[0]
-}
-
-func main() {
-	var in = []int{2, 3, 4, 5, 2, 3, 4}
-	fmt.Println(singleNumber(in))
 }

@@ -2,7 +2,7 @@
 // Time: O(logN)  Space: O(1)
 // 98.7% faster than other go submissions
 
-package main
+package leetcode
 
 func searchRange(nums []int, target int) []int {
 	result := []int{-1, -1}

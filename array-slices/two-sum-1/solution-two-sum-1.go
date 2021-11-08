@@ -1,8 +1,7 @@
-// 96.89% faster
 // Time and Space O(N)
 // https://leetcode.com/problems/two-sum/
 
-package main
+package leetcode
 
 func twoSum(nums []int, target int) []int {
 	seen := make(map[int]int)

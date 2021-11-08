@@ -2,7 +2,7 @@
 // Time: O(logN)  Space: O(1)
 // Input: nums = [4,5,6,7,0,1,2], target = 0
 
-package main
+package leetcode
 
 func findSmallestElement(nums []int, lo int, hi int) int {
 	for lo < hi {
@@ -18,7 +18,7 @@ func findSmallestElement(nums []int, lo int, hi int) int {
 }
 
 func search(nums []int, target int) int {
-	if nums == nil || len(nums) == 0 {
+	if len(nums) == 0 {
 		return -1
 	}
 	lo := 0
