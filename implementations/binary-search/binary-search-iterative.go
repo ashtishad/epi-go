@@ -1,23 +1,19 @@
 package main
 
-import (
-	"fmt"
-)
-
 func binarySearch(nums []int, target int) int {
-	var le, ri = 0, len(nums) - 1
+	var lp, rp = 0, len(nums) - 1
 
-	for le <= ri {
-		mid := le + (ri-le)/2
+	for lp <= rp {
+		mid := lp + (rp-lp)/2
 
 		if nums[mid] == target {
 			return mid
 		} else if nums[mid] > target {
 			// use left sub-list
-			ri = mid - 1
+			rp = mid - 1
 		} else {
 			// use right sub-list
-			le = mid + 1
+			lp = mid + 1
 		}
 	}
 
@@ -26,13 +22,13 @@ func binarySearch(nums []int, target int) int {
 	return -1
 }
 
-func main() {
-	target := 10
-	sortedList := []int{1, 3, 4, 6, 7, 9, 10, 11, 13}
-	index := binarySearch(sortedList, target)
-	if index >= 0 {
-		fmt.Println("Target found in index : ", index)
-	} else {
-		fmt.Println("Not found", index)
-	}
-}
+// func main() {
+// 	target := 10
+// 	sortedList := []int{1, 3, 4, 6, 7, 9, 10, 11, 13}
+// 	index := binarySearch(sortedList, target)
+// 	if index >= 0 {
+// 		fmt.Println("Target found in index : ", index)
+// 	} else {
+// 		fmt.Println("Not found", index)
+// 	}
+// }
