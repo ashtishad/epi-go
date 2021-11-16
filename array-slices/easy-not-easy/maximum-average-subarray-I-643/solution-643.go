@@ -1,3 +1,6 @@
+// 643. Maximum Average Subarray I
+// Fixed size sliding window
+
 package leetcode
 
 import "math"
