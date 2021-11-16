@@ -10,13 +10,13 @@ func Test_(t *testing.T) {
 		nums   []int
 		result int
 	}{
-		{[]int{100, 4, 200, 1, 3, 2}, 4},
-		{[]int{0, 3, 7, 2, 5, 8, 4, 6, 0, 1}, 9},
+		{[]int{3, 3, 3, 1, 2, 1, 1, 2, 3, 3, 4}, 5},
+		{[]int{1, 2, 3, 2, 2}, 4},
 	}
 
 	for _, tc := range testCases {
 		var want = tc.result
-		got := FUNCTION(tc.nums)
+		got := totalFruit(tc.nums)
 
 		if !reflect.DeepEqual(got, want) {
 			t.Errorf("Source: %d\n Expected: %d\n   Actual: %d\n",
