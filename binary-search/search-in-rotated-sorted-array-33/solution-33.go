@@ -4,45 +4,46 @@
 
 package leetcode
 
-func findSmallestElement(nums []int, lo int, hi int) int {
-	for lo < hi {
-		mid := lo + (hi-lo)/2
+func findSmallestElement(nums []int, lp int, rp int) int {
+	for lp < rp {
+		mid := lp + (rp-lp)/2
 
-		if nums[mid] > nums[hi] {
-			lo = mid + 1 // that's how we reach a sorted array
+		if nums[mid] > nums[rp] {
+			lp = mid + 1 // that's how we reach a sorted array
 		} else {
-			hi = mid // that's normal, then we can use left sub-list
+			rp = mid // that's normal, then we can use left sub-list
 		}
 	}
-	return lo
+	return lp
 }
 
 func search(nums []int, target int) int {
 	if len(nums) == 0 {
 		return -1
 	}
-	lo := 0
-	hi := len(nums) - 1
+	lp := 0
+	rp := len(nums) - 1
 
-	pivot := findSmallestElement(nums, lo, hi) // smallest element
+	pivot := findSmallestElement(nums, lp, rp) // smallest element
 
-	if target >= nums[pivot] && target <= nums[hi] {
-		lo = pivot
+	// defining searching boundary
+	if target >= nums[pivot] && target <= nums[rp] {
+		lp = pivot
 	} else {
-		hi = pivot
+		rp = pivot
 	}
 
 	// regular binary search
-	for lo <= hi {
-		mid := lo + (hi-lo)/2
+	for lp <= rp {
+		mid := lp + (rp-lp)/2
 		if nums[mid] == target {
 			return mid
 		} else if nums[mid] > target {
 			// use left sub-list
-			hi = mid - 1
+			rp = mid - 1
 		} else {
 			// use right sub-list
-			lo = mid + 1
+			lp = mid + 1
 		}
 	}
 	return -1
