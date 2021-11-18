@@ -40,24 +40,24 @@ func (g *Graph) disconnected(vertices ...*Vertex) {
 	}
 }
 
-func main() {
-	v1 := NewVertex(1)
-	v2 := NewVertex(2)
-	v3 := NewVertex(3)
-	v4 := NewVertex(4)
-	v5 := NewVertex(5)
-	v6 := NewVertex(6)
-	v7 := NewVertex(7)
-	v8 := NewVertex(8)
-	v9 := NewVertex(9)
-	v10 := NewVertex(10)
-	g := Graph{}
-	v1.connect(v2, v3, v4)
-	v2.connect(v5, v6)  // see comment 4.
-	v4.connect(v7, v8)  // see comment 4.
-	v5.connect(v9, v10) // see comment 4.
-	g.dfs(v1)
-}
+// func main() {
+// 	v1 := NewVertex(1)
+// 	v2 := NewVertex(2)
+// 	v3 := NewVertex(3)
+// 	v4 := NewVertex(4)
+// 	v5 := NewVertex(5)
+// 	v6 := NewVertex(6)
+// 	v7 := NewVertex(7)
+// 	v8 := NewVertex(8)
+// 	v9 := NewVertex(9)
+// 	v10 := NewVertex(10)
+// 	g := Graph{}
+// 	v1.connect(v2, v3, v4)
+// 	v2.connect(v5, v6)  // see comment 4.
+// 	v4.connect(v7, v8)  // see comment 4.
+// 	v5.connect(v9, v10) // see comment 4.
+// 	g.dfs(v1)
+// }
 
 /* Comments:
 1. if vertex.visited != true { is the same as if !vertex.visited {
