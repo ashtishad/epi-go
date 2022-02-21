@@ -1,6 +1,6 @@
 // similar: leetcode sort colors
 
-package main
+package epi
 
 import "math/rand"
 
