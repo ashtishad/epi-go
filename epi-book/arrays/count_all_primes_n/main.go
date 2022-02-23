@@ -1,5 +1,7 @@
 package epi
 
+// countPrimes returns the number of prime numbers less than or equal to n.
+// eliminate (1), (2), and number itself, multiples of these numbers, all even numbers.
 func countPrimes(n int) int {
 	// eliminate an odd prime 1 and only even prime 2.
 	if n < 3 {
@@ -19,7 +21,7 @@ func countPrimes(n int) int {
 		// mark all multiples of i as non-prime
 		for j := i * i; j < n; j += 2 * i {
 			if !nonPrimes[j] {
-				//nonPrimes[j] = true
+				//nonPrimes[j] = false
 				count--
 			}
 			nonPrimes[j] = true
